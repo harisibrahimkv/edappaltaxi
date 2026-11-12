@@ -9,11 +9,11 @@
 <meta property="og:description" content="Over a decade on these roads. Airport, family and outstation trips from Edappal, 24×7.">
 <meta property="og:image" content="https://edappaltaxi.com/media/og.jpg">
 <meta name="theme-color" content="#0c100f">
-<link rel="icon" type="image/svg+xml" href="media/logo-mark.svg">
-<link rel="apple-touch-icon" href="media/logo.png">
+<link rel="icon" type="image/svg+xml" href="media/logo2.svg">
+<link rel="apple-touch-icon" href="media/logo-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600;800&family=Noto+Serif+Malayalam:wght@400;600&family=Noto+Sans+Malayalam:wght@400;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"TaxiService","name":"Edappal Taxi (Grama Cabs)","telephone":"+919633631343","areaServed":"Edappal, Malappuram, Kerala","url":"https://edappaltaxi.com","provider":{"@type":"LocalBusiness","name":"Edappal Taxi (Grama Cabs)","telephone":"+919633631343","address":{"@type":"PostalAddress","addressLocality":"Edappal","addressRegion":"Kerala","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":10.7837491,"longitude":76.0076374},"hasMap":"https://www.google.com/maps/place/Edapal+taxi(Grama+Cabs)/@10.7837491,76.0076374,17z/data=!4m6!3m5!1s0x3ba7b9f984f5f1b5:0xbec465b6fa44214a!8m2!3d10.7837491!4d76.0076374!16s%2Fg%2F11zzp5v4tx","openingHours":"Mo-Su 00:00-23:59"}}
 </script>
@@ -197,6 +197,55 @@ footer .row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 footer b{color:var(--ink);font-weight:500}
 footer .estate{margin-top:20px;padding-top:20px;border-top:1px solid var(--line)}
 
+
+/* menu */
+.menu{display:flex;gap:clamp(14px,2vw,28px);font-size:.9rem}
+.menu a{text-decoration:none;color:#d8d3c7;opacity:.85;transition:opacity .2s,color .2s}
+.menu a:hover{opacity:1;color:var(--gold)}
+.navr{display:flex;align-items:center;gap:10px}
+.lang{background:none;border:1px solid #3b4541;color:var(--ink);border-radius:999px;padding:8px 14px;font:600 .85rem var(--sans);cursor:pointer}
+.lang:hover{border-color:var(--gold)}
+.burger{display:none;width:44px;height:44px;border-radius:50%;border:1px solid #3b4541;background:rgba(12,16,15,.6);cursor:pointer;position:relative}
+.burger span{position:absolute;left:13px;right:13px;height:2px;background:var(--ink);transition:transform .3s,top .3s}
+.burger span:first-child{top:17px}.burger span:last-child{top:25px}
+.nav.open .burger span:first-child{top:21px;transform:rotate(45deg)}
+.nav.open .burger span:last-child{top:21px;transform:rotate(-45deg)}
+@media (max-width:1060px){
+  .burger{display:block}
+  .menu{position:fixed;inset:0;z-index:-1;flex-direction:column;justify-content:center;align-items:center;gap:26px;background:rgba(12,16,15,.97);font-family:var(--serif);font-size:1.7rem;opacity:0;pointer-events:none;transition:opacity .35s}
+  .nav.open .menu{opacity:1;pointer-events:auto}
+}
+@media (max-width:700px){.callpill{display:none}}
+/* other services */
+.others{padding:14vh 0;border-top:1px solid var(--line);background:radial-gradient(ellipse at 80% 0%,#16201c,var(--bg) 60%)}
+.others h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,3.8rem);line-height:1.05;letter-spacing:-.02em;margin:14px 0 14px}
+.others h2 em{color:var(--gold)}
+.others .lead{color:var(--muted);max-width:560px}
+.tagline{margin:6vh 0 5vh;padding:26px 28px;border-left:3px solid var(--gold);background:rgba(217,164,65,.06);border-radius:0 14px 14px 0}
+.tagline span{display:block;font-family:"Noto Serif Malayalam",var(--serif);font-size:clamp(1.3rem,3.2vw,2.1rem);color:var(--gold2);line-height:1.5}
+.tagline small{display:block;color:var(--muted);margin-top:6px;font-size:.92rem}
+.osgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:900px){.osgrid{grid-template-columns:1fr 1fr}}
+.oscard{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:22px 22px 24px;transition:border-color .25s,transform .25s}
+.oscard:hover{border-color:#4a4636;transform:translateY(-3px)}
+.oscard svg{width:46px;height:46px;fill:none;stroke:var(--gold);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;color:var(--gold)}
+.oscard h3{font-family:var(--serif);font-weight:500;font-size:1.25rem;margin:14px 0 4px}
+.oscard p{color:var(--muted);font-size:.92rem}
+.oscta{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+@media (max-width:700px){.others{padding:64px 0}.osgrid{grid-template-columns:1fr 1fr;gap:12px}.oscard{padding:16px}.oscard h3{font-size:1.05rem}}
+
+
+/* Malayalam */
+html.ml body{font-family:"Noto Sans Malayalam",var(--sans)}
+html.ml h1,html.ml h2,html.ml h3,html.ml .sub,html.ml .num,html.ml .oscard h3,html.ml .menu{font-family:"Noto Serif Malayalam",var(--serif)}
+html.ml h2,html.ml .sub{line-height:1.35}
+html.ml h2{font-size:clamp(1.7rem,4.2vw,3.2rem)!important}
+html.ml em{font-style:normal}
+html.ml .eyebrow{letter-spacing:.06em;font-size:.82rem}
+html.ml .roads h2{font-size:clamp(1.8rem,5vw,4rem)!important}
+html.ml .call h2{font-size:clamp(2.2rem,6vw,4.6rem)!important}
+.tagline small:empty{display:none}
+
 /* mobile sticky call bar */
 .dock{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;gap:10px}
 .dock .pill{flex:1;justify-content:center;padding:14px}
@@ -220,49 +269,134 @@ footer .estate{margin-top:20px;padding-top:20px;border-top:1px solid var(--line)
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="logoSym" viewBox="0 0 512 512">
-  <defs>
-    <path id="logoTop" d="M79.3,320.3 A188,188 0 1,1 432.7,320.3"/>
-    <path id="logoBot" d="M63.7,367 A222,222 0 0,0 448.3,367"/>
-  </defs>
-  <circle cx="256" cy="256" r="250" fill="#1d5a2c"/>
-  <circle cx="256" cy="256" r="236" fill="none" stroke="#2c7a3f" stroke-width="3"/>
-  <circle cx="256" cy="256" r="164" fill="none" stroke="#fff" stroke-width="7"/>
-  <g fill="#fff" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-weight="800">
-    <text font-size="39" letter-spacing="1.5"><textPath href="#logoTop" startOffset="50%" text-anchor="middle">EDAPPAL TAXI GRAMA CABS</textPath></text>
-    <text font-size="42" letter-spacing="3"><textPath href="#logoBot" startOffset="50%" text-anchor="middle">9633631343</textPath></text>
-  </g>
-  <circle cx="61" cy="319" r="8" fill="#fff"/>
-  <circle cx="451" cy="319" r="8" fill="#fff"/>
-  <!-- C -->
-  <path d="M288,141 A108,108 0 1,0 318,312" fill="none" stroke="#fff" stroke-width="21" stroke-linecap="round"/>
-  <!-- palm -->
-  <g fill="#fff" transform="translate(16,36) scale(0.92)">
-    <path d="M186,308 C180,262 184,212 197,166 L206,168 C195,214 193,262 197,308 Z"/>
-    <path d="M202,165 C180,150 156,154 138,176 C160,165 182,164 200,173 Z"/>
-    <path d="M202,165 C188,140 166,128 144,132 C166,141 185,153 198,170 Z"/>
-    <path d="M202,165 C204,137 217,118 238,110 C225,129 214,148 206,170 Z"/>
-    <path d="M202,165 C224,145 251,143 270,156 C247,153 226,160 206,172 Z"/>
-    <path d="M202,165 C227,163 248,176 256,198 C239,182 221,176 204,174 Z"/>
-    <path d="M202,166 C185,174 173,191 171,210 C182,193 192,182 206,174 Z"/>
-  </g>
-  <!-- car, front view -->
-  <g transform="translate(304,256) scale(0.9) translate(-320,-274)">
-    <path d="M262,262 L276,230 Q280,222 290,222 L350,222 Q360,222 364,230 L378,262 Z" fill="#fff"/>
-    <rect x="248" y="256" width="144" height="56" rx="14" fill="#fff"/>
-    <rect x="256" y="300" width="26" height="26" rx="6" fill="#fff"/>
-    <rect x="358" y="300" width="26" height="26" rx="6" fill="#fff"/>
-    <path d="M276,256 L286,234 L354,234 L364,256 Z" fill="#1d5a2c"/>
-    <path d="M248,250 L236,246 Q232,252 238,256 L250,258 Z" fill="#fff"/>
-    <path d="M392,250 L404,246 Q408,252 402,256 L390,258 Z" fill="#fff"/>
-    <ellipse cx="272" cy="280" rx="11" ry="7" fill="#1d5a2c"/>
-    <ellipse cx="368" cy="280" rx="11" ry="7" fill="#1d5a2c"/>
-    <rect x="300" y="284" width="40" height="7" rx="3.5" fill="#1d5a2c"/>
-  </g>
-</symbol></svg>
+<defs><linearGradient id="logoGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1d79a"/><stop offset=".5" stop-color="#d4af6a"/><stop offset="1" stop-color="#a8823f"/></linearGradient></defs>
+<circle cx="256" cy="256" r="252" fill="url(#logoGold)"/>
+<circle cx="256" cy="256" r="240" fill="#0f2a1e"/>
+<circle cx="256" cy="256" r="232" fill="none" stroke="url(#logoGold)" stroke-width="2" opacity=".55"/>
+<circle cx="68.8" cy="156.5" r="4.2" fill="url(#logoGold)"/>
+<circle cx="82.1" cy="134.7" r="4.2" fill="url(#logoGold)"/>
+<circle cx="97.9" cy="114.8" r="4.2" fill="url(#logoGold)"/>
+<circle cx="116.0" cy="96.8" r="4.2" fill="url(#logoGold)"/>
+<circle cx="136.1" cy="81.2" r="4.2" fill="url(#logoGold)"/>
+<circle cx="157.9" cy="68.0" r="4.2" fill="url(#logoGold)"/>
+<circle cx="181.2" cy="57.6" r="4.2" fill="url(#logoGold)"/>
+<circle cx="205.5" cy="50.1" r="4.2" fill="url(#logoGold)"/>
+<circle cx="230.6" cy="45.5" r="4.2" fill="url(#logoGold)"/>
+<circle cx="256.0" cy="44.0" r="6" fill="url(#logoGold)"/>
+<circle cx="281.4" cy="45.5" r="4.2" fill="url(#logoGold)"/>
+<circle cx="306.5" cy="50.1" r="4.2" fill="url(#logoGold)"/>
+<circle cx="330.8" cy="57.6" r="4.2" fill="url(#logoGold)"/>
+<circle cx="354.1" cy="68.0" r="4.2" fill="url(#logoGold)"/>
+<circle cx="375.9" cy="81.2" r="4.2" fill="url(#logoGold)"/>
+<circle cx="396.0" cy="96.8" r="4.2" fill="url(#logoGold)"/>
+<circle cx="414.1" cy="114.8" r="4.2" fill="url(#logoGold)"/>
+<circle cx="429.9" cy="134.7" r="4.2" fill="url(#logoGold)"/>
+<circle cx="443.2" cy="156.5" r="4.2" fill="url(#logoGold)"/>
+
+<path d="M242.0,455.5 L215.8,451.9 L190.2,444.9 L165.8,434.5 L143.0,421.0 L122.2,404.6 L103.7,385.6 L87.9,364.3 L75.0,341.2 L65.4,316.5 L59.0,290.7 L56.2,264.4 L56.8,237.9 L61.0,211.7 L68.5,186.3 L79.4,162.1" fill="none" stroke="url(#logoGold)" stroke-width="3.2" stroke-linecap="round"/>
+<ellipse cx="213.2" cy="464.5" rx="18.7" ry="7.3" transform="rotate(223.6 213.2 464.5)" fill="url(#logoGold)"/>
+<ellipse cx="218.4" cy="439.4" rx="18.7" ry="7.3" transform="rotate(159.6 218.4 439.4)" fill="url(#logoGold)"/>
+<ellipse cx="186.1" cy="456.7" rx="18.4" ry="7.2" transform="rotate(231.2 186.1 456.7)" fill="url(#logoGold)"/>
+<ellipse cx="194.4" cy="433.0" rx="18.4" ry="7.2" transform="rotate(167.2 194.4 433.0)" fill="url(#logoGold)"/>
+<ellipse cx="160.3" cy="445.5" rx="17.9" ry="7.0" transform="rotate(238.8 160.3 445.5)" fill="url(#logoGold)"/>
+<ellipse cx="171.4" cy="423.6" rx="17.9" ry="7.0" transform="rotate(174.8 171.4 423.6)" fill="url(#logoGold)"/>
+<ellipse cx="136.3" cy="430.9" rx="17.5" ry="6.8" transform="rotate(246.4 136.3 430.9)" fill="url(#logoGold)"/>
+<ellipse cx="149.8" cy="411.2" rx="17.5" ry="6.8" transform="rotate(182.4 149.8 411.2)" fill="url(#logoGold)"/>
+<ellipse cx="114.4" cy="413.2" rx="17.0" ry="6.6" transform="rotate(254.0 114.4 413.2)" fill="url(#logoGold)"/>
+<ellipse cx="129.9" cy="396.0" rx="17.0" ry="6.6" transform="rotate(190.0 129.9 396.0)" fill="url(#logoGold)"/>
+<ellipse cx="95.1" cy="392.9" rx="16.4" ry="6.4" transform="rotate(261.6 95.1 392.9)" fill="url(#logoGold)"/>
+<ellipse cx="112.2" cy="378.4" rx="16.4" ry="6.4" transform="rotate(197.6 112.2 378.4)" fill="url(#logoGold)"/>
+<ellipse cx="78.8" cy="370.2" rx="15.8" ry="6.2" transform="rotate(269.2 78.8 370.2)" fill="url(#logoGold)"/>
+<ellipse cx="97.0" cy="358.5" rx="15.8" ry="6.2" transform="rotate(205.2 97.0 358.5)" fill="url(#logoGold)"/>
+<ellipse cx="65.6" cy="345.6" rx="15.2" ry="5.9" transform="rotate(276.8 65.6 345.6)" fill="url(#logoGold)"/>
+<ellipse cx="84.5" cy="336.7" rx="15.2" ry="5.9" transform="rotate(212.8 84.5 336.7)" fill="url(#logoGold)"/>
+<ellipse cx="55.8" cy="319.5" rx="14.6" ry="5.7" transform="rotate(284.4 55.8 319.5)" fill="url(#logoGold)"/>
+<ellipse cx="74.9" cy="313.5" rx="14.6" ry="5.7" transform="rotate(220.4 74.9 313.5)" fill="url(#logoGold)"/>
+<ellipse cx="49.6" cy="292.4" rx="14.0" ry="5.4" transform="rotate(292.0 49.6 292.4)" fill="url(#logoGold)"/>
+<ellipse cx="68.4" cy="289.1" rx="14.0" ry="5.4" transform="rotate(228.0 68.4 289.1)" fill="url(#logoGold)"/>
+<ellipse cx="47.1" cy="264.8" rx="13.3" ry="5.2" transform="rotate(299.6 47.1 264.8)" fill="url(#logoGold)"/>
+<ellipse cx="65.3" cy="264.0" rx="13.3" ry="5.2" transform="rotate(235.6 65.3 264.0)" fill="url(#logoGold)"/>
+<ellipse cx="48.2" cy="237.1" rx="12.6" ry="4.9" transform="rotate(307.2 48.2 237.1)" fill="url(#logoGold)"/>
+<ellipse cx="65.4" cy="238.7" rx="12.6" ry="4.9" transform="rotate(243.2 65.4 238.7)" fill="url(#logoGold)"/>
+<ellipse cx="53.0" cy="209.9" rx="11.9" ry="4.6" transform="rotate(314.8 53.0 209.9)" fill="url(#logoGold)"/>
+<ellipse cx="68.9" cy="213.5" rx="11.9" ry="4.6" transform="rotate(250.8 68.9 213.5)" fill="url(#logoGold)"/>
+<ellipse cx="61.4" cy="183.6" rx="11.2" ry="4.4" transform="rotate(322.4 61.4 183.6)" fill="url(#logoGold)"/>
+<ellipse cx="75.7" cy="189.0" rx="11.2" ry="4.4" transform="rotate(258.4 75.7 189.0)" fill="url(#logoGold)"/>
+<ellipse cx="73.1" cy="158.7" rx="10.5" ry="4.1" transform="rotate(330.0 73.1 158.7)" fill="url(#logoGold)"/>
+<ellipse cx="85.7" cy="165.5" rx="10.5" ry="4.1" transform="rotate(266.0 85.7 165.5)" fill="url(#logoGold)"/>
+<path d="M270.0,455.5 L296.2,451.9 L321.8,444.9 L346.2,434.5 L369.0,421.0 L389.8,404.6 L408.3,385.6 L424.1,364.3 L437.0,341.2 L446.6,316.5 L453.0,290.7 L455.8,264.4 L455.2,237.9 L451.0,211.7 L443.5,186.3 L432.6,162.1" fill="none" stroke="url(#logoGold)" stroke-width="3.2" stroke-linecap="round"/>
+<ellipse cx="298.8" cy="464.5" rx="18.7" ry="7.3" transform="rotate(-43.6 298.8 464.5)" fill="url(#logoGold)"/>
+<ellipse cx="293.6" cy="439.4" rx="18.7" ry="7.3" transform="rotate(20.4 293.6 439.4)" fill="url(#logoGold)"/>
+<ellipse cx="325.9" cy="456.7" rx="18.4" ry="7.2" transform="rotate(-51.2 325.9 456.7)" fill="url(#logoGold)"/>
+<ellipse cx="317.6" cy="433.0" rx="18.4" ry="7.2" transform="rotate(12.8 317.6 433.0)" fill="url(#logoGold)"/>
+<ellipse cx="351.7" cy="445.5" rx="17.9" ry="7.0" transform="rotate(-58.8 351.7 445.5)" fill="url(#logoGold)"/>
+<ellipse cx="340.6" cy="423.6" rx="17.9" ry="7.0" transform="rotate(5.2 340.6 423.6)" fill="url(#logoGold)"/>
+<ellipse cx="375.7" cy="430.9" rx="17.5" ry="6.8" transform="rotate(-66.4 375.7 430.9)" fill="url(#logoGold)"/>
+<ellipse cx="362.2" cy="411.2" rx="17.5" ry="6.8" transform="rotate(-2.4 362.2 411.2)" fill="url(#logoGold)"/>
+<ellipse cx="397.6" cy="413.2" rx="17.0" ry="6.6" transform="rotate(-74.0 397.6 413.2)" fill="url(#logoGold)"/>
+<ellipse cx="382.1" cy="396.0" rx="17.0" ry="6.6" transform="rotate(-10.0 382.1 396.0)" fill="url(#logoGold)"/>
+<ellipse cx="416.9" cy="392.9" rx="16.4" ry="6.4" transform="rotate(-81.6 416.9 392.9)" fill="url(#logoGold)"/>
+<ellipse cx="399.8" cy="378.4" rx="16.4" ry="6.4" transform="rotate(-17.6 399.8 378.4)" fill="url(#logoGold)"/>
+<ellipse cx="433.2" cy="370.2" rx="15.8" ry="6.2" transform="rotate(-89.2 433.2 370.2)" fill="url(#logoGold)"/>
+<ellipse cx="415.0" cy="358.5" rx="15.8" ry="6.2" transform="rotate(-25.2 415.0 358.5)" fill="url(#logoGold)"/>
+<ellipse cx="446.4" cy="345.6" rx="15.2" ry="5.9" transform="rotate(-96.8 446.4 345.6)" fill="url(#logoGold)"/>
+<ellipse cx="427.5" cy="336.7" rx="15.2" ry="5.9" transform="rotate(-32.8 427.5 336.7)" fill="url(#logoGold)"/>
+<ellipse cx="456.2" cy="319.5" rx="14.6" ry="5.7" transform="rotate(-104.4 456.2 319.5)" fill="url(#logoGold)"/>
+<ellipse cx="437.1" cy="313.5" rx="14.6" ry="5.7" transform="rotate(-40.4 437.1 313.5)" fill="url(#logoGold)"/>
+<ellipse cx="462.4" cy="292.4" rx="14.0" ry="5.4" transform="rotate(-112.0 462.4 292.4)" fill="url(#logoGold)"/>
+<ellipse cx="443.6" cy="289.1" rx="14.0" ry="5.4" transform="rotate(-48.0 443.6 289.1)" fill="url(#logoGold)"/>
+<ellipse cx="464.9" cy="264.8" rx="13.3" ry="5.2" transform="rotate(-119.6 464.9 264.8)" fill="url(#logoGold)"/>
+<ellipse cx="446.7" cy="264.0" rx="13.3" ry="5.2" transform="rotate(-55.6 446.7 264.0)" fill="url(#logoGold)"/>
+<ellipse cx="463.8" cy="237.1" rx="12.6" ry="4.9" transform="rotate(-127.2 463.8 237.1)" fill="url(#logoGold)"/>
+<ellipse cx="446.6" cy="238.7" rx="12.6" ry="4.9" transform="rotate(-63.2 446.6 238.7)" fill="url(#logoGold)"/>
+<ellipse cx="459.0" cy="209.9" rx="11.9" ry="4.6" transform="rotate(-134.8 459.0 209.9)" fill="url(#logoGold)"/>
+<ellipse cx="443.1" cy="213.5" rx="11.9" ry="4.6" transform="rotate(-70.8 443.1 213.5)" fill="url(#logoGold)"/>
+<ellipse cx="450.6" cy="183.6" rx="11.2" ry="4.4" transform="rotate(-142.4 450.6 183.6)" fill="url(#logoGold)"/>
+<ellipse cx="436.3" cy="189.0" rx="11.2" ry="4.4" transform="rotate(-78.4 436.3 189.0)" fill="url(#logoGold)"/>
+<ellipse cx="438.9" cy="158.7" rx="10.5" ry="4.1" transform="rotate(-150.0 438.9 158.7)" fill="url(#logoGold)"/>
+<ellipse cx="426.3" cy="165.5" rx="10.5" ry="4.1" transform="rotate(-86.0 426.3 165.5)" fill="url(#logoGold)"/>
+<path d="M232,446 L280,466 M280,446 L232,466" stroke="url(#logoGold)" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="256" cy="256" r="158" fill="none" stroke="url(#logoGold)" stroke-width="4"/>
+<g stroke="#d4af6a" stroke-width="3" stroke-linecap="round"><line x1="134" y1="256" x2="378" y2="256"/><line x1="256" y1="132" x2="256" y2="380"/></g>
+<g fill="none" stroke="#d4af6a" color="#d4af6a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M152,222 L152,204 Q152,196 160,194 L168,176 Q171,170 178,170 L202,170 Q209,170 212,176 L220,194 Q228,196 228,204 L228,222 Z"/>
+<path d="M168,194 L174,180 L206,180 L212,194 Z"/>
+<rect x="181" y="160" width="18" height="9" rx="2"/>
+<circle cx="166" cy="208" r="5"/><circle cx="214" cy="208" r="5"/><line x1="182" y1="210" x2="198" y2="210"/>
+<path d="M156,222 L156,232 L170,232 L170,222 M210,222 L210,232 L224,232 L224,222"/>
+<path d="M282,200 L318,166 L354,200"/><path d="M290,193 L290,234 L346,234 L346,193"/><path d="M310,234 L310,212 L326,212 L326,234"/><path d="M336,182 L336,168 L344,168 L344,189"/>
+<g transform="translate(146,288) scale(0.98)">
+<path d="M22,12 Q26,6 36,6 L78,6 Q90,6 92,18 L92,32 Q90,40 82,40 L30,40 Q24,38 22,30 Z"/>
+<path d="M22,12 L10,9 Q3,9 3,16 L5,25 Q7,30 13,28 L22,24"/>
+<path d="M10,9 Q7,3 12,1 M16,10 L22,5"/>
+<path d="M32,40 L32,58 M43,40 L43,58 M74,40 L74,58 M85,40 L85,58"/>
+<path d="M92,16 Q101,26 98,42"/>
+<path d="M56,40 Q61,47 66,40"/>
+<circle cx="9" cy="16" r="1.4" fill="currentColor"/>
+<path d="M44,14 Q52,10 56,18 Q50,24 44,14 Z M68,22 Q76,20 78,28 Q70,30 68,22 Z"/>
+</g>
+<path d="M318,288 L318,356"/>
+<path d="M318,306 Q306,300 304,290 Q314,294 318,302"/>
+<path d="M318,306 Q330,300 332,290 Q322,294 318,302"/>
+<path d="M318,319 Q306,313 304,303 Q314,307 318,315"/>
+<path d="M318,319 Q330,313 332,303 Q322,307 318,315"/>
+<path d="M318,332 Q306,326 304,316 Q314,320 318,328"/>
+<path d="M318,332 Q330,326 332,316 Q322,320 318,328"/>
+<path d="M318,345 Q306,339 304,329 Q314,333 318,341"/>
+<path d="M318,345 Q330,339 332,329 Q322,333 318,341"/>
+<path d="M318,296 Q314,286 318,278 Q322,286 318,296"/>
+</g></symbol></svg>
 
 <nav class="nav" id="nav">
-  <a class="mark" href="#top"><svg class="logo" role="img" aria-label="Edappal Taxi Grama Cabs logo"><use href="#logoSym"/></svg><span>Edappal <em>Taxi</em></span></a>
-  <a class="pill gold" href="tel:+919633631343"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>96336 31343</a>
+  <a class="mark" href="#top"><svg class="logo" role="img" aria-label="Edappal Taxi and Grama Real Estate logo"><use href="#logoSym"/></svg><span>Edappal <em>Taxi</em></span></a>
+  <div class="menu" id="menu">
+    <a href="#film">Our story</a><a href="#fleet">Fleet</a><a href="#services">Taxi services</a><a href="#more">Other services</a><a href="#reviews">Reviews</a><a href="#findus">Contact</a>
+  </div>
+  <div class="navr">
+  <button class="lang" id="langBtn" type="button" aria-label="Switch language">മലയാളം</button>
+  <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  <a class="pill gold callpill" href="tel:+919633631343"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>96336 31343</a>
+  </div>
 </nav>
 
 <!-- 1. HERO -->
@@ -378,7 +512,7 @@ footer .estate{margin-top:20px;padding-top:20px;border-top:1px solid var(--line)
 </section>
 
 <!-- 5. SERVICES -->
-<section class="services">
+<section class="services" id="services">
   <div class="wrap">
     <p class="eyebrow">Where we take you</p>
     <h2>Day or night, <em>Fasil knows the way.</em></h2>
@@ -386,15 +520,37 @@ footer .estate{margin-top:20px;padding-top:20px;border-top:1px solid var(--line)
       <div><h3>Airport pick-up &amp; drop</h3><p>Calicut, Kochi and Kannur airports. On time, both ways.</p></div>
       <div><h3>Hospital visits</h3><p>Careful, unhurried rides for patients and the family with them.</p></div>
       <div><h3>Family &amp; weddings</h3><p>Functions, visits and outings, from 4 to 17 seats.</p></div>
-      <div><h3>Tours &amp; outstation</h3><p>Ghats, beaches and temples across Kerala and beyond.</p></div>
+      <div><h3>Tours &amp; outstation</h3><p>Ghats, beaches and pilgrim spots across Kerala and beyond.</p></div>
       <div><h3>Business travel</h3><p>Dependable rides for offices, clients and guests.</p></div>
       <div><h3>Anywhere, 24×7</h3><p>A quick hop across town or a long drive across the state, any hour.</p></div>
     </div>
   </div>
 </section>
 
+<!-- 5b. OTHER SERVICES -->
+<section class="others" id="more">
+  <div class="wrap">
+    <p class="eyebrow">Grama Real Estate &amp; more</p>
+    <h2>Two services. <em>One call.</em></h2>
+    <p class="lead">For over a decade Fasil has also helped families with land, homes, farms and livestock around Edappal.</p>
+    <blockquote class="tagline"><span lang="ml">വണ്ടി വേണോ, വീട് വേണോ… ഒരു കോൾ മതി.</span><small>Need a car? Need a house? One call is enough.</small></blockquote>
+    <div class="osgrid">
+      <div class="oscard"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 38 L18 32 L30 38 L42 32 L42 12 L30 18 L18 12 L6 18 Z"/><path d="M18 12 V32 M30 18 V38"/><path d="M30 6 a5 5 0 0 1 5 5 c0 4-5 9-5 9 s-5-5-5-9 a5 5 0 0 1 5-5z"/></svg><h3>House plots</h3><p>Residential plots in and around Edappal.</p></div>
+      <div class="oscard"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 34 Q16 26 24 30 T44 26"/><path d="M4 42 Q18 34 28 38 T44 34"/><path d="M10 26 V14 M10 14 l-4 4 M10 14 l4 4 M10 20 l-4 3 M10 20 l4 3"/><circle cx="36" cy="12" r="5"/></svg><h3>Land sale</h3><p>Buy or sell land, with honest local advice.</p></div>
+      <div class="oscard"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 40 L44 40"/><path d="M8 40 Q14 26 24 24 Q34 26 40 40"/><path d="M16 40 Q20 30 24 30 Q28 30 32 40"/><path d="M24 8 V22 M24 12 q-5-2-6-6 q5 1 6 6 M24 16 q5-2 6-6 q-5 1-6 6"/></svg><h3>Farm & agricultural land</h3><p>Paddy, coconut and farm land.</p></div>
+      <div class="oscard"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 22 L22 8 L38 22"/><path d="M10 19 V40 H34 V19"/><path d="M18 40 V28 H26 V40"/><circle cx="38" cy="32" r="5"/><path d="M38 37 V44 M38 40 H41 M38 43 H41"/></svg><h3>Rental houses</h3><p>Homes to rent for families.</p></div>
+      <div class="oscard"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 14 H28 V34 H4 Z"/><path d="M28 20 H37 L44 27 V34 H28"/><circle cx="12" cy="36" r="4"/><circle cx="36" cy="36" r="4"/><path d="M9 14 V8 H17 V14 M17 14 V10 H24 V14"/></svg><h3>House shifting support</h3><p>Vans and help to move your home.</p></div>
+      <div class="oscard"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 6 H30 V12 L34 18 V42 H14 V18 L18 12 Z"/><path d="M14 26 H34"/><path d="M24 30 q-4 5 0 8 q4-3 0-8z"/></svg><h3>Dairy farms</h3><p>Dairy farm setup and sale.</p></div>
+      <div class="oscard"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 18 q0-8 8-8 q4 0 6 4 l6 -2 -3 5 q6 4 6 12 q0 10-12 12 q-14 0-14-12 q0-6 3-11z"/><path d="M20 10 q-2-4 2-6 q1 3 2 4"/><circle cx="22" cy="16" r="1.4" fill="currentColor"/><path d="M18 42 V46 M28 42 V46"/></svg><h3>Poultry farms</h3><p>Poultry farm setup and sale.</p></div>
+      <div class="oscard"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 16 Q14 12 20 12 H36 Q42 12 42 20 V28 Q42 32 38 32 H18 Q14 32 12 26 Z"/><path d="M12 16 L5 15 Q2 15 3 20 L5 24 L12 24"/><path d="M18 32 V42 M24 32 V42 M34 32 V42 M40 32 V42"/><path d="M30 4 L38 4 L40 10 L34 12 Z"/><circle cx="35" cy="7" r="1"/></svg><h3>Livestock sale</h3><p>Cows and cattle, bought and sold.</p></div>
+      <div class="oscard"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M2 12 H30 V34 H2 Z"/><path d="M30 20 H38 L46 27 V34 H30"/><circle cx="10" cy="36" r="4"/><circle cx="38" cy="36" r="4"/><path d="M8 26 Q9 20 14 20 H22 Q26 20 26 25 V28 M8 26 L5 24 M12 28 V30 M22 28 V30"/></svg><h3>Cattle transport</h3><p>Safe transport for your animals.</p></div>
+    </div>
+    <div class="oscta"><a class="pill gold" href="tel:+919633631343">Call 96336 31343</a><a class="pill line" target="_blank" rel="noopener" href="https://wa.me/919633631343?text=Hi%20Fasil%2C%20I%27d%20like%20to%20ask%20about%20land%20%2F%20property."><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.82 14.08c-.24.68-1.42 1.3-1.96 1.35-.5.05-.98.24-3.3-.69-2.8-1.1-4.58-3.97-4.72-4.15-.14-.18-1.13-1.5-1.13-2.87 0-1.36.72-2.03.97-2.31.25-.28.55-.35.73-.35l.53.01c.17 0 .4-.06.62.48.24.56.8 1.94.87 2.08.07.14.12.3.02.48-.09.18-.14.3-.28.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.24 2.25 1.38.28.14.44.12.6-.07.16-.19.69-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.6.76 1.88.9.28.14.46.21.53.32.07.12.07.66-.17 1.33z"/></svg>Ask on WhatsApp</a></div>
+  </div>
+</section>
+
 <!-- 7. REVIEWS -->
-<section class="review">
+<section class="review" id="reviews">
   <div class="wrap">
     <p class="eyebrow">What people say</p>
     <blockquote class="reveal-w" id="quote">“A service I have been using reliably for over a decade now. … Fasil has the expertise to know the need of the hour and not only offer taxi services, but <em>grant help as a friend</em> as well.”</blockquote>
@@ -409,7 +565,7 @@ footer .estate{margin-top:20px;padding-top:20px;border-top:1px solid var(--line)
 </section>
 
 <!-- 8. FIND US -->
-<section class="wrap findus">
+<section class="wrap findus" id="findus">
   <div>
     <p class="eyebrow">Find us</p>
     <h2>Based in Edappal. <em>Going everywhere.</em></h2>
@@ -424,7 +580,7 @@ footer .estate{margin-top:20px;padding-top:20px;border-top:1px solid var(--line)
   <video src="media/bridge.mp4" poster="media/bridge.jpg" muted playsinline loop preload="none" id="callVid"></video>
   <div class="shade"></div>
   <div class="in">
-    <svg class="biglogo" role="img" aria-label="Edappal Taxi Grama Cabs logo"><use href="#logoSym"/></svg>
+    <svg class="biglogo" role="img" aria-label="Edappal Taxi and Grama Real Estate logo"><use href="#logoSym"/></svg>
     <p class="eyebrow">Book a ride</p>
     <h2>Where to <em>next?</em></h2>
     <p class="num">96336 31343</p>
@@ -438,10 +594,9 @@ footer .estate{margin-top:20px;padding-top:20px;border-top:1px solid var(--line)
 <footer>
   <div class="wrap">
     <div class="row">
-      <div class="brandrow"><svg class="flogo" role="img" aria-label="Edappal Taxi Grama Cabs logo"><use href="#logoSym"/></svg><div><b>Edappal Taxi · Grama Cabs</b><br>Edappal, Malappuram, Kerala · Open 24×7</div></div>
+      <div class="brandrow"><svg class="flogo" role="img" aria-label="Edappal Taxi and Grama Real Estate logo"><use href="#logoSym"/></svg><div><b>Edappal Taxi · Grama Cabs</b><br>Edappal, Malappuram, Kerala · Open 24×7</div></div>
       <div>Call / WhatsApp <b>96336 31343</b></div>
     </div>
-    <p class="estate">Also from Fasil: <b>Grama Real Estate</b>. House plots, land, farm land and rental houses around Edappal. <a href="tel:+919633631343">Enquire →</a></p>
   </div>
 </footer>
 
@@ -464,9 +619,14 @@ if (!reduce) {
   gsap.ticker.add(t => lenis.raf(t * 1000));
   gsap.ticker.lagSmoothing(0);
   document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
-    const el = document.querySelector(a.getAttribute('href')); if (el) { e.preventDefault(); lenis.scrollTo(el); }
+    const el = document.querySelector(a.getAttribute('href')); if (el) { e.preventDefault(); lenis.scrollTo(el, { offset: -72 }); }
   }));
 }
+
+// mobile menu
+const navEl = document.getElementById('nav'), burger = document.getElementById('burger');
+burger.addEventListener('click', () => { const o = navEl.classList.toggle('open'); burger.setAttribute('aria-expanded', o); });
+document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => { navEl.classList.remove('open'); burger.setAttribute('aria-expanded', false); }));
 
 // nav gets a backdrop after the hero
 ScrollTrigger.create({ start: () => innerHeight * 0.9, onToggle: s => document.getElementById('nav').classList.toggle('solid', s.isActive) });
@@ -513,7 +673,7 @@ pb.addEventListener('click', () => { promo.muted = false; if (promo.ended) promo
 promo.addEventListener('click', () => { if (!promo.paused) promo.pause(); });
 promo.addEventListener('play', () => screen.classList.add('playing'));
 promo.addEventListener('pause', () => screen.classList.remove('playing'));
-promo.addEventListener('ended', () => { screen.classList.remove('playing'); promo.currentTime = 0; pb.querySelector('.lbl').textContent = 'Watch again'; });
+promo.addEventListener('ended', () => { screen.classList.remove('playing'); promo.currentTime = 0; pb.querySelector('.lbl').textContent = lang === 'ml' ? ML['Watch again'] : 'Watch again'; });
 new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting && !promo.paused) promo.pause(); }), { threshold: .2 }).observe(promo);
 
 // play/pause every video by visibility
@@ -550,6 +710,10 @@ ScrollTrigger.matchMedia({
   }
 });
 
+// ---- other services cards ----
+gsap.utils.toArray('.oscard, .others h2, .tagline').forEach((el, i) =>
+  gsap.from(el, { opacity: 0, y: 30, duration: .9, delay: (i % 3) * .06, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 92%' } }));
+
 // ---- 6. services fade up ----
 gsap.utils.toArray('.svc div, .services h2').forEach((el, i) =>
   gsap.from(el, { opacity: 0, y: 30, duration: .9, delay: (i % 3) * .08, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 90%' } }));
@@ -566,6 +730,35 @@ gsap.utils.toArray('.svc div, .services h2').forEach((el, i) =>
 
 // ---- 8. call heading ----
 gsap.from('.call .in > *', { opacity: 0, y: 40, stagger: .12, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '#call', start: 'top 60%' } });
+
+
+// ---- language: English / Malayalam ----
+const ML = {"Our story": "ഞങ്ങളുടെ കഥ", "Fleet": "വാഹനങ്ങൾ", "Taxi services": "ടാക്സി സേവനങ്ങൾ", "Other services": "മറ്റ് സേവനങ്ങൾ", "Reviews": "അഭിപ്രായങ്ങൾ", "Contact": "ബന്ധപ്പെടാൻ", "Over a decade on these roads.": "പത്ത് വർഷത്തിലേറെയായി ഈ വഴികളിൽ.", "The sedan · 4 + 1 seats": "സെഡാൻ · 4 + 1 സീറ്റ്", "Clean, cool and always on time.": "വൃത്തിയുള്ള, തണുപ്പുള്ള, എപ്പോഴും കൃത്യസമയത്ത്.", "first 5 km": "ആദ്യ 5 കി.മീ.", "per km after": "തുടർന്ന് ഓരോ കി.മീ.ക്കും", "per km, one way": "വൺ വേ, ഓരോ കി.മീ.ക്കും", "per km one way": "വൺ വേ, ഓരോ കി.മീ.ക്കും", "Scroll": "താഴേക്ക്", "Every ride, a story": "ഓരോ യാത്രയും ഒരു കഥ", "Some journeys": "ചില യാത്രകൾ", "mean more.": "മനസ്സിൽ തൊടും.", "Play the film": "വീഡിയോ കാണാം", "The ride": "യാത്ര", "Sit back.": "സുഖമായി ഇരിക്കൂ.", "We've got the road.": "വഴി ഞങ്ങൾ നോക്കിക്കോളാം.", "Spotless, air-conditioned cars": "വൃത്തിയുള്ള എസി കാറുകൾ", "Cleaned before every trip, cool from the moment you get in.": "ഓരോ യാത്രയ്ക്കു മുൻപും വൃത്തിയാക്കുന്നു; കയറുമ്പോൾ തന്നെ തണുപ്പ്.", "Calm, careful driving": "ശാന്തവും ശ്രദ്ധയോടെയുമുള്ള ഡ്രൈവിംഗ്", "Smooth on the ghats, steady in the rain, gentle with elders and little ones.": "ചുരത്തിൽ സുഗമം, മഴയിൽ സുരക്ഷിതം, പ്രായമായവരോടും കുട്ടികളോടും കരുതലോടെ.", "On time, 24×7": "24×7, കൃത്യസമയത്ത്", "Early flights, late trains, last-minute plans. One call is enough.": "അതിരാവിലത്തെ ഫ്ലൈറ്റ്, രാത്രി വൈകിയ ട്രെയിൻ, അവസാന നിമിഷത്തെ യാത്ര. ഒരു കോൾ മതി.", "A hand with the bags": "ലഗേജിനും ഒരു കൈ സഹായം", "Suitcases in and out of the boot, every time, without being asked.": "പെട്ടികൾ ഡിക്കിയിൽ കയറ്റാനും ഇറക്കാനും, ചോദിക്കാതെ തന്നെ, എപ്പോഴും.", "The fleet": "ഞങ്ങളുടെ വാഹനങ്ങൾ", "One car or": "ഒരു കാർ മുതൽ", "seventeen seats.": "പതിനേഴ് സീറ്റ് വരെ.", "From a quiet airport drop to the whole family's wedding trip.": "ഒരാളുടെ എയർപോർട്ട് യാത്ര മുതൽ കുടുംബത്തിന്റെ മുഴുവൻ കല്യാണയാത്ര വരെ.", "4 + 1 seats": "4 + 1 സീറ്റ്", "Sedan": "സെഡാൻ", "Our everyday car. Airport runs, hospital visits, town trips.": "ഞങ്ങളുടെ നിത്യവാഹനം. എയർപോർട്ട്, ആശുപത്രി, ടൗൺ യാത്രകൾ.", "Book: 96336 31343": "ബുക്ക് ചെയ്യാൻ: 96336 31343", "7 seats": "7 സീറ്റ്", "Innova Crysta": "ഇന്നോവ ക്രിസ്റ്റ", "Room for the family and the luggage. Long trips in comfort.": "കുടുംബത്തിനും ലഗേജിനും ഇടം. ദൂരയാത്രകൾ സുഖകരമായി.", "Request rate": "നിരക്ക് ചോദിക്കാം", "12 seats": "12 സീറ്റ്", "Force Urbania": "ഫോഴ്സ് അർബാനിയ", "Premium van for groups, with big windows and high roof.": "വലിയ ജനലുകളും ഉയർന്ന മേൽക്കൂരയുമുള്ള പ്രീമിയം വാൻ, കൂട്ടയാത്രകൾക്ക്.", "17 seats": "17 സീറ്റ്", "Traveller": "ട്രാവലർ", "Weddings, pilgrimages and tours. Everyone travels together.": "കല്യാണം, തീർത്ഥയാത്ര, ടൂർ. എല്ലാവരും ഒരുമിച്ച്.", "Ambulance": "ആംബുലൻസ്", "For patient transfers and hospital trips. Call for availability.": "രോഗികളെ കൊണ്ടുപോകാനും ആശുപത്രി യാത്രകൾക്കും. ലഭ്യതയ്ക്ക് വിളിക്കൂ.", "Call now": "ഇപ്പോൾ വിളിക്കൂ", "Ghat roads at sunrise.": "പുലർച്ചെ ചുരം കയറ്റം.", "Night rain in town.": "രാത്രിമഴയിൽ നഗരം.", "Airport at 4 a.m.": "പുലർച്ചെ 4 മണിക്ക് എയർപോർട്ട്.", "Whatever the hour or the weather, a calm, careful driver who knows the way.": "സമയം ഏതായാലും കാലാവസ്ഥ എന്തായാലും, വഴിയറിയുന്ന ശാന്തനും ശ്രദ്ധാലുവുമായ ഡ്രൈവർ.", "Where we take you": "ഞങ്ങൾ എത്തിക്കുന്നിടങ്ങൾ", "Day or night,": "രാവായാലും പകലായാലും,", "Fasil knows the way.": "വഴി ഫാസിലിനറിയാം.", "Airport pick-up & drop": "എയർപോർട്ട് പിക്കപ്പ് & ഡ്രോപ്പ്", "Calicut, Kochi and Kannur airports. On time, both ways.": "കോഴിക്കോട്, കൊച്ചി, കണ്ണൂർ എയർപോർട്ടുകൾ. പോക്കും വരവും കൃത്യസമയത്ത്.", "Hospital visits": "ആശുപത്രി യാത്രകൾ", "Careful, unhurried rides for patients and the family with them.": "രോഗികൾക്കും കൂടെയുള്ളവർക്കും ശ്രദ്ധയോടെ, തിരക്കില്ലാതെ.", "Family & weddings": "കുടുംബം & കല്യാണം", "Functions, visits and outings, from 4 to 17 seats.": "ചടങ്ങുകൾ, സന്ദർശനങ്ങൾ, വിനോദയാത്രകൾ. 4 മുതൽ 17 സീറ്റ് വരെ.", "Tours & outstation": "ടൂർ & ദൂരയാത്ര", "Ghats, beaches and pilgrim spots across Kerala and beyond.": "കേരളത്തിനകത്തും പുറത്തുമുള്ള ചുരങ്ങൾ, കടൽത്തീരങ്ങൾ, തീർത്ഥാടന കേന്ദ്രങ്ങൾ.", "Business travel": "ബിസിനസ് യാത്രകൾ", "Dependable rides for offices, clients and guests.": "ഓഫീസുകൾക്കും ക്ലയന്റുകൾക്കും അതിഥികൾക്കും വിശ്വസിക്കാവുന്ന യാത്ര.", "Anywhere, 24×7": "എവിടേക്കും, 24×7", "A quick hop across town or a long drive across the state, any hour.": "ടൗണിലെ ചെറിയ ഓട്ടം മുതൽ സംസ്ഥാനം കടന്നുള്ള ദൂരയാത്ര വരെ, ഏത് സമയത്തും.", "Grama Real Estate & more": "ഗ്രാമ റിയൽ എസ്റ്റേറ്റും മറ്റും", "Two services.": "രണ്ട് സേവനങ്ങൾ.", "One call.": "ഒരൊറ്റ കോൾ.", "For over a decade Fasil has also helped families with land, homes, farms and livestock around Edappal.": "പത്ത് വർഷത്തിലേറെയായി എടപ്പാളിലും പരിസരത്തും ഭൂമി, വീട്, ഫാം, കന്നുകാലി കാര്യങ്ങളിലും ഫാസിൽ കുടുംബങ്ങൾക്ക് തുണയാണ്.", "Need a car? Need a house? One call is enough.": "", "House plots": "വീട് പ്ലോട്ടുകൾ", "Residential plots in and around Edappal.": "എടപ്പാളിലും പരിസരത്തും വീടുവയ്ക്കാനുള്ള സ്ഥലങ്ങൾ.", "Land sale": "ഭൂമി വിൽപ്പന", "Buy or sell land, with honest local advice.": "ഭൂമി വാങ്ങാനും വിൽക്കാനും, സത്യസന്ധമായ നാട്ടറിവോടെ.", "Farm & agricultural land": "കൃഷിഭൂമി", "Paddy, coconut and farm land.": "നെൽവയൽ, തെങ്ങിൻതോപ്പ്, കൃഷിസ്ഥലം.", "Rental houses": "വാടക വീടുകൾ", "Homes to rent for families.": "കുടുംബങ്ങൾക്ക് വാടകയ്ക്ക് വീടുകൾ.", "House shifting support": "വീട് മാറ്റത്തിന് സഹായം", "Vans and help to move your home.": "വീട്ടുസാധനങ്ങൾ മാറ്റാൻ വാനും സഹായവും.", "Dairy farms": "ഡെയറി ഫാമുകൾ", "Dairy farm setup and sale.": "ഡെയറി ഫാം തുടങ്ങാനും വിൽക്കാനും.", "Poultry farms": "കോഴി ഫാമുകൾ", "Poultry farm setup and sale.": "കോഴി ഫാം തുടങ്ങാനും വിൽക്കാനും.", "Livestock sale": "കന്നുകാലി വിൽപ്പന", "Cows and cattle, bought and sold.": "പശുക്കളെയും കന്നുകാലികളെയും വാങ്ങാനും വിൽക്കാനും.", "Cattle transport": "കന്നുകാലി ഗതാഗതം", "Safe transport for your animals.": "നിങ്ങളുടെ മൃഗങ്ങൾക്ക് സുരക്ഷിത യാത്ര.", "Call 96336 31343": "വിളിക്കൂ: 96336 31343", "Ask on WhatsApp": "വാട്ട്സ്ആപ്പിൽ ചോദിക്കൂ", "What people say": "ആളുകൾ പറയുന്നത്", "Haris · customer for over ten years": "Haris · പത്ത് വർഷത്തിലേറെയായി യാത്രക്കാരൻ", "Read the reviews on Google →": "ഗൂഗിളിലെ അഭിപ്രായങ്ങൾ വായിക്കാം →", "Find us": "ഞങ്ങളെ കണ്ടെത്താൻ", "Based in Edappal.": "എടപ്പാളിൽ നിന്ന്.", "Going everywhere.": "എവിടേക്കും.", "Edappal, Malappuram, Kerala. Open 24×7.": "എടപ്പാൾ, മലപ്പുറം, കേരളം. 24 മണിക്കൂറും സേവനം.", "Open in Google Maps →": "ഗൂഗിൾ മാപ്പിൽ തുറക്കാം →", "Book a ride": "യാത്ര ബുക്ക് ചെയ്യാം", "Where to": "ഇനി", "next?": "എങ്ങോട്ട്?", "WhatsApp": "വാട്ട്സ്ആപ്പ്", "Edappal, Malappuram, Kerala · Open 24×7": "എടപ്പാൾ, മലപ്പുറം, കേരളം · 24 മണിക്കൂറും", "Call / WhatsApp": "വിളിക്കൂ / വാട്ട്സ്ആപ്പ്", "Call": "വിളിക്കൂ", "Watch again": "വീണ്ടും കാണാം"};
+const enText = new Map();
+const skipSel = '.review blockquote, .quotes blockquote, .quotes figcaption, script, style, svg, [lang="ml"], .brand, .mark';
+function textNodes() {
+  const out = [], w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, { acceptNode: n =>
+    (!n.nodeValue.trim() || (n.parentElement && n.parentElement.closest(skipSel))) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+  while (w.nextNode()) out.push(w.currentNode);
+  return out;
+}
+let lang = 'en';
+function setLang(l) {
+  lang = l;
+  for (const n of textNodes()) {
+    if (!enText.has(n)) enText.set(n, n.nodeValue);
+    const en = enText.get(n), key = en.trim();
+    if (l === 'ml' && key in ML) n.nodeValue = en.replace(key, ML[key]); else n.nodeValue = en;
+  }
+  document.documentElement.lang = l;
+  document.documentElement.classList.toggle('ml', l === 'ml');
+  document.getElementById('langBtn').textContent = l === 'ml' ? 'English' : 'മലയാളം';
+  try { localStorage.setItem('lang', l); } catch (e) {}
+  ScrollTrigger.refresh();
+}
+document.getElementById('langBtn').addEventListener('click', () => setLang(lang === 'ml' ? 'en' : 'ml'));
+let saved = null; try { saved = localStorage.getItem('lang'); } catch (e) {}
+if (saved === 'ml' || (!saved && /^ml/i.test(navigator.language || ''))) setLang('ml');
 
 ScrollTrigger.sort();
 addEventListener('load', () => { ScrollTrigger.sort(); ScrollTrigger.refresh(); });
